@@ -29,6 +29,10 @@ class QuizzSeeder extends Seeder
                 'name' => 'Quizz 4',
                 'description' => 'description for Quizz 4',
             ],
+            [
+                'name' => 'Quizz 5',
+                'description' => 'description for Quizz 5',
+            ],
         ];
     }
 }
