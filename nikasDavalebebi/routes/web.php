@@ -2,21 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', [QuizController::class, 'index']);
-Route::get('/post/{post?}', [QuizController::class, "createOrUpdate"])->name('post');
-
+Route::get('/quizzes/create', [QuizController::class, 'savePage']);
+Route::get('/quizzes/{id}/update', [QuizController::class, 'savePage']);
+Route::post('/quizzes', [QuizController::class, 'createOrUpdate']);
